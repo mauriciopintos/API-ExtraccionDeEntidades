@@ -1,3 +1,4 @@
+# spacy_component_module.py
 import spacy
 from spacy.tokens import Doc
 from spacy.language import Language

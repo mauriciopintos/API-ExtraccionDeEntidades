@@ -162,3 +162,5 @@ cython_debug/
 # Miselaneos
 OLDERS/
 CURLS.txt
+OpenAI-config.json
+entidadesCapturadas*.json

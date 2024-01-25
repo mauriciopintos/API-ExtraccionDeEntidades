@@ -1,10 +1,8 @@
 # main.py
 from flask import Flask, request, jsonify
-import spacy
-from spacy.tokens import Doc
-from spacy.language import Language
 from modules.spacy_component_module import load_spacy_components
 from modules.regex_module import extract_domicilios
+from modules.OpenAI import obtener_entidades_con_openai
 
 app = Flask(__name__)
 
@@ -31,6 +29,16 @@ def extraer_entidades():
     resultado = {**doc._.datos_match, 'domicilio': domicilios, 'nombres_propios': nombres_propios}
 
     return jsonify(resultado)
+
+@app.route('/extraer_entidades_gpt', methods=['POST'])
+def extraer_entidades_gpt():
+    datos = request.get_json()
+    texto = datos.get('texto', '')
+
+    # Obtener entidades con OpenAI
+    entidades_openai = obtener_entidades_con_openai(texto)
+
+    return jsonify(entidades_openai)
 
 if __name__ == '__main__':
     app.run(debug=True)
