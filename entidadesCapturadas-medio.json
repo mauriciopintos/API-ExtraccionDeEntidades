@@ -1,0 +1,61 @@
+{
+  "Correo": [
+    "juan.perez@mail.com",
+    "maria.perez@mail.com",
+    "maria.perez@mail.com",
+    "juan.perez@mail.com",
+    "maria.perez@mail.com"
+  ],
+  "DNI": [
+    "12.345.678",
+    "87.654.321",
+    "98.765.432"
+  ],
+  "Patente": [
+    "ABC123",
+    "DE456FG"
+  ],
+  "Tarjeta": [
+    "7890-1234-5678-9012",
+    "7890-1234-5678-9012"
+  ],
+  "Telefono": [
+    "11-2345-6789",
+    "11-2345-6789",
+    "11-2345-6789"
+  ],
+  "domicilio": [
+    "Calle Falsa 123",
+    "Avenida Siempreviva 456",
+    "Avenida de los Sue\u00f1os",
+    "Pasaje de las Maravillas. Su DNI",
+    "Plaza de los Misterios. Mar\u00eda P\u00e9rez",
+    "Colonia de las Mariposas",
+    "Calle de los Tesoros. El Correo electr\u00f3nico",
+    "Camino de los Deseos",
+    "Barrio de los Misterios",
+    "Avenida de los Secretos albergaba el misterioso Correo electr\u00f3nico",
+    "Carrera de las Estrellas",
+    "Colonia de los Sue\u00f1os",
+    "Calle del Sol",
+    "Colonia en constante movimiento. Juan P\u00e9rez",
+    "Plaza central. Su DNI",
+    "Pje. de las Mariposas se emocionaba al escuchar su n\u00famero de Tel\u00e9fono",
+    "Calle de las Sombras",
+    "Av. de los Sue\u00f1os"
+  ],
+  "nombres_propios": [
+    "Juan P\u00e9rez",
+    "Mar\u00eda P\u00e9rez",
+    "ABC123",
+    "Calles",
+    "Juan P\u00e9rez",
+    "Mar\u00eda P\u00e9rez",
+    "ddddddd/d",
+    "Juan",
+    "Mar\u00eda",
+    "Juan P\u00e9rez",
+    "Tel\u00e9fono",
+    "Mar\u00eda P\u00e9rez"
+  ]
+}

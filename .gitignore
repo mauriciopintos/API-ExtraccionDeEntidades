@@ -160,5 +160,5 @@ cython_debug/
 #.idea/
 
 # Miselaneos
-./OLDERS
+OLDERS/
 CURLS.txt
