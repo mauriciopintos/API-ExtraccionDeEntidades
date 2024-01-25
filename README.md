@@ -65,8 +65,9 @@ Actualmente, la API solo cuenta con un endpoint, pero a medida que avance el pro
 
 Una vez que la API se encuentra corriendo, podemos probarla mediante CURL desde la consola CMD en Windows o Terminal de Linux, como se muestra en los ejemplos.
 
-- Ejemplos CURL
-  CURL 1:
+- Ejemplos CURL 
+
+CURL 1:
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -d "{\"texto\":\"Hola, mi nombre es Juan Pérez y vivo en la Calle Falsa 123, Buenos Aires. Mi DNI es 12.345.678 y mi teléfono es 11-2345-6789. También tengo un segundo DNI, el 87.654.321. Puedes contactarme a mi correo electrónico juan.perez@mail.com o a mi teléfono alternativo (11) 4 567-8901. Mi hermana, María Pérez, vive en Avenida Siempreviva 456, Rosario. Su DNI es 98.765.432 y su teléfono es 341-2345-678. Su correo electrónico es maria.perez@mail.com. Recientemente, compré un auto con la patente ABC123 y mi hermana compró uno con la patente DE456FG. Mi tarjeta de crédito es 1234 5678 9012 3456 y la de mi hermana es 7890-1234-5678-9012. Mi número de cuenta es 1234567-8 y el de mi hermana es 8765432/1. Por favor, no compartas esta información con nadie ya que son datos sensibles. Gracias. \"}" http://127.0.0.1:5000/extraer_entidades > entidadesCapturadas-corto.json
