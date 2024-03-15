@@ -25,6 +25,7 @@ pip install openai
 pip install openai==0.28
 pip freeze > requirements.txt
 pip install -r requirements.txt
+pip install beautifulsoup4
 ```
 
 ## USO
@@ -65,7 +66,7 @@ Actualmente, la API solo cuenta con un endpoint, pero a medida que avance el pro
 
 Una vez que la API se encuentra corriendo, podemos probarla mediante CURL desde la consola CMD en Windows o Terminal de Linux, como se muestra en los ejemplos.
 
-- Ejemplos CURL 
+- Ejemplos CURL
 
 CURL 1:
 
