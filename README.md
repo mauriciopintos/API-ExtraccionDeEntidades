@@ -49,9 +49,14 @@ python app/main.py
 |   |   |   |-- spacy_component.py
 |   |   |   |-- tools/
 |   |   |   |   |-- decode_escapado.py
-|   |   |   |   |-- verifica_OpenAI_config.py
+|   |   |   |   |-- valida_openai_config.py
 |   |   |-- models/
 |   |   |   |-- __init__.py
+|   |   |-- routes/
+|   |   |   |-- __init__.py
+|   |   |   |-- extraccion_entidades_routes.py
+|   |   |   |-- manejador_exepciones_routes.py
+|   |   |   |-- openai_routes.py
 |   |-- config/
 |   |   |-- __init__.py
 |   |   |-- OpenAI_config.json
@@ -69,13 +74,21 @@ python app/main.py
 
 ## Endpoints
 
-Actualmente, la API solo cuenta con un endpoint, pero a medida que se avance con el proyecto se podran incorporar otros de ser necesario.
+Actualmente, la API solo cuenta con dos endpoints, pero a medida que se avance con el proyecto se podran incorporar otros de ser necesario.
 
 `/api/extraer_entidades`
 
 - Método: POST
 - Descripción: Extrae entidades en formato JSON.
-- Parámetros: curl -X POST -H "Content-Type: application/json" -d "{\"texto\":\"Hola, mundo.\"}" http://127.0.0.1:5000/extraer_entidades
+- Parámetros:
+  > curl -X POST -H "Content-Type: application/json" -d "{\"texto\":\"Hola, mundo.\"}" http://127.0.0.1:5000/extraer_entidades
+
+`/api/valida_openai_config`
+
+- Método: GET
+- Descripción: Valída si la configuración de credenciales de OpenAI es correcta.
+- Parámetros:
+  > curl http://127.0.0.1:5000/valida_openai_config
 
 ## Ejemplos
 
@@ -98,14 +111,27 @@ curl -X POST -H "Content-Type: application/json" -d "{\"texto\":\"Hola, mi nombr
 ## Base conceptual
 
 https://docs.python.org/es/3/library/re.html#
+
 https://regex101.com/
+
 https://spacy.io/usage
+
 https://spacy.io/api
+
 https://www.textraction.ai/
+
 https://oa.upm.es/
+
 https://github.com/IBacieroFdez/SpanishNER/blob/master/Code/.ipynb_checkpoints/patterns-checkpoint.ipynb
+
 https://pro.arcgis.com/es/pro-app/3.0/tool-reference/geoai/train-entity-recognition-model.htm
+
 https://platform.openai.com/docs/introduction
+
 https://platform.openai.com/docs/assistants/overview?context=with-streaming
+
 https://learn.microsoft.com/es-es/azure/ai-services/openai/
+
 https://learn.microsoft.com/es-es/azure/ai-services/openai/api-version-deprecation
+
+https://docs.python.org/es/3.12/

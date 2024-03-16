@@ -1,39 +1,9 @@
-# main.py
-from flask import Flask
-from routes.extraccion_entidades_routes import entidades_blueprint
-from routes.manejador_excepciones_routes import *
-from routes.openai_routes import openai_blueprint
-
-app = Flask(__name__)
-app.register_blueprint(entidades_blueprint)
-app.register_blueprint(openai_blueprint)
-
-
-# Registrar los manejadores de errores
-app.register_error_handler(NotFound, manejo_not_found_error)
-app.register_error_handler(InternalServerError, manejo_internal_server_error)
-app.register_error_handler(BadRequest, manejo_bad_request_error)
-app.register_error_handler(Forbidden, manejo_forbidden_error)
-app.register_error_handler(Unauthorized, manejo_unauthorized_error)
-app.register_error_handler(MethodNotAllowed, manejo_method_not_allowed_error)
-app.register_error_handler(ServiceUnavailable, manejo_service_unavailable_error)
-app.register_error_handler(RequestTimeout, manejo_request_timeout_error)
-app.register_error_handler(TooManyRequests, manejo_too_many_requests_error)
-app.register_error_handler(BadGateway, manejo_bad_gateway_error)
-
-if __name__ == '__main__':
-    app.run(debug=True)
-
-
-
-
-"""
-from flask import Flask, Response, request, jsonify
+from flask import Blueprint, request
 from components.spacy_component import load_spacy_components
 from components.regex_component import extract_domicilios
 from components.OpenAI_component import extraer_entidades_GPT
 
-app = Flask(__name__)
+entidades_blueprint = Blueprint('entidades', __name__)
 
 # Carga el modelo de lenguaje y carga componentes de SpaCy
 nlp, matcher = load_spacy_components()
@@ -41,7 +11,7 @@ nlp, matcher = load_spacy_components()
 # Patrón regex para extraer domicilios
 patron_domicilio = extract_domicilios()
 
-@app.route('/extraer_entidades', methods=['POST'])
+@entidades_blueprint.route('/extraer_entidades', methods=['POST'])
 def extraer_entidades():
     datos = request.get_json()
     texto = datos.get('texto', '')
@@ -69,18 +39,12 @@ def extraer_entidades():
         }.items() if value is not None
     }
     
-    
     # Eliminar duplicados de cada lista en el resultado
     for key in resultado.keys():
         if isinstance(resultado[key], list):
             resultado[key] = list(set(resultado[key]))
 
-    #response_json = Response(data_json, mimetype='application/json')
     salida_gpt = extraer_entidades_GPT(resultado)
     
     # Devolver la salida formateada
     return salida_gpt
-
-if __name__ == '__main__':
-    app.run(debug=True)
-"""

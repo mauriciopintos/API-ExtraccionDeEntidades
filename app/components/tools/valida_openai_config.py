@@ -9,7 +9,7 @@ def cargar_configuracion():
     except FileNotFoundError:
         raise FileNotFoundError("El archivo OpenAI-config.json no se encuentra. Por favor, asegúrate de que existe y contiene la configuración necesaria.")
 
-def validar_credenciales():
+def validar_config():
     configuracion = cargar_configuracion()
     openai.api_type = "azure"
     openai.api_key = configuracion.get("api_key", "")
@@ -30,9 +30,6 @@ def validar_credenciales():
             n=1,
             stream=False
         )
-        print("Las credenciales de OpenAI son válidas.")
+        return True
     except openai.error.AuthenticationError:
-        print("Error: Las credenciales de OpenAI son inválidas.")
-
-if __name__ == '__main__':
-    validar_credenciales()
+        return False
