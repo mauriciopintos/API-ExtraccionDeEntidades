@@ -1,0 +1,47 @@
+{
+  "Correo": [
+    "juan.perez@mail.com",
+    "maria.perez@mail.com"
+  ],
+  "DNI": [
+    "98.765.432",
+    "87.654.321",
+    "12.345.678"
+  ],
+  "Patente": [
+    "DE456FG",
+    "ABC123"
+  ],
+  "Tarjeta": [
+    "7890-1234-5678-9012"
+  ],
+  "Telefono": [
+    "11-2345-6789"
+  ],
+  "domicilios": [
+    "Avenida de los Secretos",
+    "Pasaje de las Maravillas.",
+    ""Colonia"",
+    "Calle Falsa 123 -> Calle",
+    "Barrio.",
+    "Pje. de las Mariposas",
+    "Calle.",
+    "Plaza de los Misterios. ERROR",
+    "Colonia",
+    "Avenida",
+    "Calle del Sol es una calle.",
+    "Camino",
+    "'Carrera de las Estrellas' - ERROR",
+    "Calle de los Tesoros. ERROR",
+    "Av. de los Sueños - Avenida",
+    "Colonia",
+    "Plaza Central.",
+    "Avenida Siempreviva 456 -> Avenida"
+  ],
+  "nombres_propios": [
+    "Juan",
+    "María",
+    "María Pérez",
+    "Juan Pérez"
+  ]
+}

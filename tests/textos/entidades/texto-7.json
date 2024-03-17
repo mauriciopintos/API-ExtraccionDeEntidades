@@ -1,0 +1,18 @@
+{
+  "Correo": [
+    "maria.perez@mail.com"
+  ],
+  "Telefono": [
+    "11-2345-6789"
+  ],
+  "domicilios": [
+    "Pasaje de las Mariposas",
+    "Calle",
+    "Calle",
+    "Av."
+  ],
+  "nombres_propios": [
+    "María Pérez",
+    "Juan Pérez"
+  ]
+}

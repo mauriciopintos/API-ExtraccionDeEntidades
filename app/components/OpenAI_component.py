@@ -1,14 +1,18 @@
-# OpenAI_module.py
+# OpenAI_component.py
 import openai
 import json
+import os
+import sys
 
-def cargar_configuracion():
-    try:
-        with open('./config/OpenAI-config.json', 'r') as config_file:
-            return json.load(config_file)
-    except FileNotFoundError:
-        raise FileNotFoundError("El archivo OpenAI-config.json no se encuentra. Por favor, asegúrate de que existe y contiene la configuración necesaria.")
+# Obtener la ruta del directorio actual del script
+current_dir = os.path.dirname(os.path.realpath(__file__))
 
+# Agregar el directorio raíz del proyecto al sys.path
+root_dir = os.path.abspath(os.path.join(current_dir, "../.."))  # Retrocede dos niveles
+sys.path.append(root_dir)
+
+# Ahora puedes importar desde el módulo cargador_config
+from config.cargador_config import cargar_configuracion
 
 def extraer_entidades_GPT(texto_json):
     # Almacenar los nombres del objeto JSON 

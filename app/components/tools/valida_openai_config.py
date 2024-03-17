@@ -1,4 +1,4 @@
-# validate_openai_credentials.py
+# valida_openai_config.py
 import openai
 import json
 

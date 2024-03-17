@@ -1,4 +1,4 @@
-#    texto_decodificado = resultado.encode('utf-8').decode('unicode-escape')
+# decode_escapado_test.py
 
 def decodificar_texto_escapado(entrada, salida):
     with open(entrada, 'r', encoding='utf-8') as archivo_entrada:

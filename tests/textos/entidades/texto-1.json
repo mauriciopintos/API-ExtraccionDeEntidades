@@ -1,0 +1,29 @@
+{
+  "Correo": [
+    "juan.perez@mail.com",
+    "maria.perez@mail.com"
+  ],
+  "DNI": [
+    "98.765.432",
+    "87.654.321",
+    "12.345.678"
+  ],
+  "Patente": [
+    "DE456FG",
+    "ABC123"
+  ],
+  "Tarjeta": [
+    "7890-1234-5678-9012"
+  ],
+  "Telefono": [
+    "11-2345-6789"
+  ],
+  "domicilios": [
+    "Avenida Siempreviva 456 -> Avenida",
+    "Calle Falsa 123 es un domicilio."
+  ],
+  "nombres_propios": [
+    "María Pérez",
+    "Juan Pérez"
+  ]
+}

@@ -1,3 +1,4 @@
+# extraccion_entidades_routes.py
 from flask import Blueprint, request
 from components.spacy_component import load_spacy_components
 from components.regex_component import extract_domicilios

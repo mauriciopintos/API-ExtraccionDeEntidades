@@ -1,6 +1,6 @@
 {
   "api_key": "My-Clave-OpenAI-API",
   "deployment_id": "My-Deployment-id",
-  "api_base": "https://scba-openai-lab.openai.azure.com/",
-  "api_version": "2023-03-15-preview"
+  "api_base": "https://api.openai.com/",
+  "api_version": "v1"
 }

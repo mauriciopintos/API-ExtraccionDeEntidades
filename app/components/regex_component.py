@@ -1,4 +1,4 @@
-# regex_module.py
+# regex_component.py
 import re
 
 def extract_domicilios():
