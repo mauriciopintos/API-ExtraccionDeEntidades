@@ -3,6 +3,7 @@ from flask import Blueprint, request
 from components.spacy_component import load_spacy_components
 from components.regex_component import extract_domicilios
 from components.OpenAI_component import extraer_entidades_GPT
+from components.tools.valida_openai_config import validar_config
 
 entidades_blueprint = Blueprint('entidades', __name__)
 
@@ -44,8 +45,12 @@ def extraer_entidades():
     for key in resultado.keys():
         if isinstance(resultado[key], list):
             resultado[key] = list(set(resultado[key]))
-
-    salida_gpt = extraer_entidades_GPT(resultado)
     
+    # Validar y procesar considerando que no funcione OpenAI
+    if validar_config():
+        salida = extraer_entidades_GPT(resultado)
+    else:
+        salida = resultado
+
     # Devolver la salida formateada
-    return salida_gpt
+    return salida
